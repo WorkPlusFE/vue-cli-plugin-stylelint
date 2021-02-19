@@ -2,7 +2,7 @@ const generateWithPlugin = require('@vue/cli-test-utils/generateWithPlugin');
 
 test('default', async () => {
   const { pkg } = await generateWithPlugin({
-    id: '@ascendancyy/vue-cli-plugin-stylelint',
+    id: '@w6s/vue-cli-plugin-stylelint',
     apply: require('../generator'),
     options: {},
   });
@@ -13,7 +13,7 @@ test('default', async () => {
 
 test('standard', async () => {
   const { pkg } = await generateWithPlugin({
-    id: '@ascendancyy/vue-cli-plugin-stylelint',
+    id: '@w6s/vue-cli-plugin-stylelint',
     apply: require('../generator'),
     options: {
       config: 'stylelint-config-standard',
@@ -26,7 +26,7 @@ test('standard', async () => {
 
 test('primer', async () => {
   const { pkg } = await generateWithPlugin({
-    id: '@ascendancyy/vue-cli-plugin-stylelint',
+    id: '@w6s/vue-cli-plugin-stylelint',
     apply: require('../generator'),
     options: {
       config: 'stylelint-config-primer',
@@ -39,20 +39,20 @@ test('primer', async () => {
 
 test('kanbaru', async () => {
   const { pkg } = await generateWithPlugin({
-    id: '@ascendancyy/vue-cli-plugin-stylelint',
+    id: '@w6s/vue-cli-plugin-stylelint',
     apply: require('../generator'),
     options: {
-      config: '@ascendancyy/stylelint-config-kanbaru',
+      config: '@w6s/stylelint-config-kanbaru',
     },
   });
 
   expect(pkg.scripts['lint:style']).toBeTruthy();
-  expect(pkg.devDependencies).toHaveProperty('@ascendancyy/stylelint-config-kanbaru');
+  expect(pkg.devDependencies).toHaveProperty('@w6s/stylelint-config-kanbaru');
 });
 
 test('custom preset', async () => {
   const { pkg } = await generateWithPlugin({
-    id: '@ascendancyy/vue-cli-plugin-stylelint',
+    id: '@w6s/vue-cli-plugin-stylelint',
     apply: require('../generator'),
     options: {
       config: {
@@ -76,7 +76,7 @@ test('custom preset', async () => {
 
 test('lint on save', async () => {
   const { pkg } = await generateWithPlugin({
-    id: '@ascendancyy/vue-cli-plugin-stylelint',
+    id: '@w6s/vue-cli-plugin-stylelint',
     apply: require('../generator'),
     options: {
       lintStyleOn: 'build',
@@ -87,7 +87,7 @@ test('lint on save', async () => {
 
 test('lint on commit', async () => {
   const { pkg } = await generateWithPlugin({
-    id: '@ascendancyy/vue-cli-plugin-stylelint',
+    id: '@w6s/vue-cli-plugin-stylelint',
     apply: require('../generator'),
     options: {
       lintStyleOn: 'commit',
@@ -103,7 +103,7 @@ test('lint on commit', async () => {
 
 test('cancel', async () => {
   const { pkg } = await generateWithPlugin({
-    id: '@ascendancyy/vue-cli-plugin-stylelint',
+    id: '@w6s/vue-cli-plugin-stylelint',
     apply: require('../generator'),
     options: {
       overwriteConfig: 'abort',

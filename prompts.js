@@ -40,7 +40,7 @@ const questions = [
       new inquirer.Separator(),
       {
         name: 'Kanbaru',
-        value: '@ascendancyy/stylelint-config-kanbaru',
+        value: '@w6s/stylelint-config-kanbaru',
         short: 'Kanbaru',
       },
     ],
